@@ -524,7 +524,7 @@ def Experiment_activation_n_structure(AC_OP, RES_OP):
         PSNR00 = np.concatenate((PSNR_mean, PSNR_var),axis=0)
         
         
-        columns = ['Barbara512', 'Boat', 'fingerprint', 'Hill', 'Lena512', 'Man', 'Mandrill', 'Text3', 'Text4', 'MNIST']
+        columns = ['Barbara512', 'Boat', 'fingerprint', 'Hill', 'l512', 'Man', 'Mandrill', 'Text3', 'Text4', 'MNIST']
         data = pd.DataFrame(PSNR00, columns=columns)
         PATH = path + '/4%s.xlsx'%(DA)
         writer = pd.ExcelWriter(PATH)
@@ -536,7 +536,7 @@ def Experiment_activation_n_structure(AC_OP, RES_OP):
         PSNRo_var = np.var(PSNR4_o, axis=0)
         PSNR_o = np.concatenate((PSNRo_mean, PSNRo_var),axis=0)
         
-        columns = ['Barbara512', 'Boat', 'fingerprint', 'Hill', 'Lena512', 'Man', 'Mandrill', 'Text3', 'Text4', 'MNIST']
+        columns = ['Barbara512', 'Boat', 'fingerprint', 'Hill', 'l512', 'Man', 'Mandrill', 'Text3', 'Text4', 'MNIST']
         data = pd.DataFrame(PSNR_o, columns=columns)
         PATH = path + '/4_o%s.xlsx'%(DA)
         writer = pd.ExcelWriter(PATH)
